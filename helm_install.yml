@@ -1,6 +1,6 @@
 ---
 # all helms will be installed here
-# currently first portion does not work. 
+# currently first portion does not work.
 # it give error when run against a controller.
 #
 - hosts: controller
@@ -9,7 +9,7 @@
   tasks:
     #  - name: Install haproxy helm chart
     #     helm:
-    #       #host: 
+    #       #host:
     #       chart:
     #         source:
     #           type: git
@@ -22,7 +22,7 @@
      kubernetes.core.helm_repository:
        name: haproxytech
        repo_url: "https://haproxytech.github.io/helm-charts"
-       
+
    - name: Install haproxy helm chart from remote_url
      kubernetes.core.helm:
        name: haproxytech
