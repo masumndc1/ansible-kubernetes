@@ -10,7 +10,7 @@
       hostname: master
       image: ubuntu-ssh:v1.0
       state: started
-      ports: 
+      ports:
         - "2222:22/tcp"
       network_mode: bridge
       networks_cli_compatible: yes
