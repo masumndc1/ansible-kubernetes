@@ -1,5 +1,5 @@
 ---
-# this yml will install some common packages 
+# this yml will install some common packages
 # and docker on all nodes(ie controller and workers)
 - hosts: all
   become: yes
@@ -7,7 +7,7 @@
 
   tasks:
   - name: Install some packages
-    apt: 
+    apt:
       name: [ 'vim',
               'git',
               'net-tools',
@@ -17,20 +17,18 @@
               'gpg',
               'python3-apt',
               'python3-pip',
-              'apt-transport-https'
-      ]
+              'apt-transport-https']
       state: latest
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
   - name: Install python modules
-    pip: 
-      name: [ 
+    pip:
+      name: [
        'docker',
        'kubernetes==11.0.0',
        'openshift==0.11.0',
-       'pyhelm'
-    ] 
+       'pyhelm']
 
   - name: Install docker
     apt:
