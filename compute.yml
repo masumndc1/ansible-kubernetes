@@ -39,8 +39,7 @@
     apt:
       name: [ 'kubeadm',
               'kubelet',
-              'kubectl'
-      ]
+              'kubectl']
       update_cache: yes
       state: latest
 
